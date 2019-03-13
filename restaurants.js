@@ -96,7 +96,7 @@
                 td3.appendChild(vote);
 
                 //fetch number of reviews of restaurant
-                var s=new XMLHttpRequest();
+                var s=new XMLHttpRequest(); 
                 s.open("GET", "https://developers.zomato.com/api/v2.1/reviews?res_id="+restid,true);
                  s.setRequestHeader('Accept', 'application/json');
                 s.setRequestHeader('user-key','5b4414767efef3384939bfff67f52dc1');
