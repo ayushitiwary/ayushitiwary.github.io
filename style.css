@@ -1,0 +1,218 @@
+
+body{
+    background-color: rgb(224, 223, 223);
+    background: url(body6.jpg);
+ background-size: 100%;
+ width: 100%;
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+}
+#mainimg
+{
+    width:100%;
+    border-radius: 20px;
+}
+#name
+{
+    font-size: 25px;
+    color: rgb(241, 234, 224);
+    padding: 10px;
+    width: 100%;
+}
+#ratereview
+{
+    font-size: 20px;
+}
+.row{
+    padding: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 20px;
+    color: rgb(190, 186, 130);
+    background-color: rgb(49, 18, 18, .85);
+}
+#name, .reviewtext{
+
+    font-family: 'Times New Roman', Times, serif;
+}
+.userreview, center
+{
+    padding:20px;
+    text-decoration: none;
+}
+.userreview
+{
+    color: rgb(190, 186, 130);
+}
+a{
+    text-decoration: none;
+}
+.username
+{
+    font-size: 20px;
+    padding-left: 10px;
+    width: 100%;
+    color: rgb(238, 237, 178);
+}
+.display{
+    width:70%;
+    overflow: auto;
+    margin-left: 15%;
+   height: auto;
+   display:table;
+}
+.profilepic
+{
+    height:45px;
+    width: 45px;
+    border-radius: 30px;
+}
+
+.hr{
+background-color: rgb(49, 47, 47);
+padding: 20px 0px;
+}
+.city
+{
+   background-color:rgb(197, 157, 106);
+    border-radius: 25px;
+    padding:20px;
+    text-align: center;
+    color: rgb(58, 19, 19);
+    width: 200px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    margin:20px 0px 0px 0px;
+    
+}
+.city:hover
+{
+    background-color: rgb(19, 11, 4);
+    cursor: pointer;
+    color: rgb(231, 230, 157);
+}
+
+
+
+.restimg
+{
+    width:200px;
+    height:105px;
+    border-radius: 20px;
+}
+.restimg2
+{
+    width:150px;
+    height:90px;
+    border-radius: 20px;
+}
+.restname
+{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+/* Pagination links */
+#pages a 
+{
+  color: rgb(116, 124, 129);
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: rgb(48, 45, 43);
+  border-radius: 30px;
+  border: 5px;
+}
+
+/* Style the active/current link */
+
+ #pages
+ {
+     overflow: auto;
+     min-width:max-content;
+     padding: 50px;
+ }
+/* Add a grey background color on mouse-over */
+#pages a:hover
+{
+    background-color: rgb(131, 20, 20);
+    cursor: pointer;
+    color: rgb(216, 203, 203);
+}
+
+#text
+{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    padding: 20px;
+}
+.header
+{
+    width:100%; 
+    height:10%; 
+    font-weight: bold;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-size: 60px;
+   background: url(header.png);
+   color: rgb(197, 157, 106);
+background-size: 100%;
+background-color: rgba( 0, 0, 0.911, .8);
+min-height:200px;
+z-index: 1;
+background-repeat:no-repeat;
+}
+
+#title
+{
+    font-size: 20px;
+    color: rgb(241, 208, 185)
+}
+
+#seemore
+{
+    color: rgb(157, 157, 199);
+    font-size: 18px;
+}
+
+#activelink
+{
+    background-color: rgb(8, 73, 8)
+}
+
+#like
+{
+    float: right;
+    color: rgb(241, 190, 182);
+    font-size: 40px;
+    text-align: center;
+    margin-right: 50px;
+    background-color: rgba(211, 220, 228, 0);
+    border: 0px;
+}
+#like:hover
+{
+    color: rgb(199, 67, 67);
+    cursor: pointer;
+}
+#cityspan
+{
+    color: rgb(231, 231, 205);
+    font-size: 22px;
+    font-family: 'Times New Roman', Times, serif;
+    border: 0px;
+}
+#nearbyRest
+{
+    color: aliceblue;
+}
+#nearby
+{
+    color: aliceblue;
+    margin-top: 300px;
+}
+
+#neartitle
+{
+    color: rgb(238, 193, 97);
+    font-size: 25px;
+    padding: 30px;
+}
