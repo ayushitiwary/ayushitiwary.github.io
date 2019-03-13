@@ -99,7 +99,7 @@
                 var s=new XMLHttpRequest();
                 s.open("GET", "https://developers.zomato.com/api/v2.1/reviews?res_id="+restid,true);
                  s.setRequestHeader('Accept', 'application/json');
-                s.setRequestHeader('user-key','a023e4281d32c808084c94cb4de108ca');
+                s.setRequestHeader('user-key','5b4414767efef3384939bfff67f52dc1');
                 s.onload=function(){
                    if (s.status == 200)
                      {
