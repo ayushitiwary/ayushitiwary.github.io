@@ -29,9 +29,10 @@ r.onload = function ()
            costAndAddress();    //display cost for 2 people and address of restaurant
  
            cuisines();    //display cuisines
-
-        s.onload=function(){
-            if (r.status == 200)
+    }
+};
+  s.onload=function(){
+            if (s.status == 200)
            {
               Sresponse=JSON.parse(s.responseText);
               
@@ -42,9 +43,7 @@ r.onload = function ()
 
                reviews();      // get reviews
            }
-      }
-    }
-};
+  };
 r.onerror = function(err){
   console.log(err);
   };
