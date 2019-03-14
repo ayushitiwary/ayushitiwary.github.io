@@ -99,11 +99,10 @@ padding: 20px 0px;
     height:105px;
     border-radius: 20px;
 }
-.restimg2
+.nearbyimg
 {
-    width:150px;
-    height:90px;
-    border-radius: 20px;
+    width:120px;
+    border-radius: 5px;
 }
 .restname
 {
@@ -113,7 +112,7 @@ padding: 20px 0px;
 /* Pagination links */
 #pages a 
 {
-  color: rgb(116, 124, 129);
+  color: rgb(221, 228, 233);
   padding: 10px 15px;
   text-decoration: none;
   font-size: 20px;
@@ -208,6 +207,7 @@ background-repeat:no-repeat;
 {
     color: aliceblue;
     margin-top: 300px;
+    width: 80%;
 }
 
 #neartitle
