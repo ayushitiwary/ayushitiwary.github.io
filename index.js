@@ -37,7 +37,8 @@ function nearbyRestaurants()
     var near=document.getElementById('nearbyRest');
 
     var table=document.createElement('table');
-    table.setAttribute('cellspacing','10px');
+   // table.setAttribute('cellspacing','40px');
+    table.setAttribute('cellpadding','25px');
     table.setAttribute('id','nearby');
     var tr1=document.createElement('tr');
     var text = document.createTextNode("Restaurants nearby you");
@@ -67,9 +68,14 @@ function nearbyRestaurants()
          //get featured image of restaurant
          var td1=document.createElement('td');
         var img = document.createElement('img');
-        img.setAttribute('class', 'restimg2');
-        td1.setAttribute('width', '150px');
-        img.src=response.restaurants[i].restaurant.featured_image;
+        //img.setAttribute('class', 'restimg2');
+        //td1.setAttribute('width', '150px');
+        if(response.restaurants[i].restaurant.featured_image)
+               img.src=response.restaurants[i].restaurant.featured_image;
+               else
+               { img.src=("default.png");
+                    img.setAttribute('width','110px');
+            }
         td1.appendChild(img);
         tr1.appendChild(td1);
 
