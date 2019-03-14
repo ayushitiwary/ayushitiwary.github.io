@@ -1,4 +1,5 @@
  
+    
      var npages;
      var total;
     var urlParams = new URLSearchParams(window.location.search);
@@ -68,8 +69,15 @@
               
                 //get featured image of restaurant
                var img = document.createElement('img');
-               img.setAttribute('class', 'restimg');
-               img.src=response.restaurants[i].restaurant.featured_image;
+               if(response.restaurants[i].restaurant.featured_image)
+               {
+                    img.src=response.restaurants[i].restaurant.featured_image;
+                    img.setAttribute('class', 'restimg');
+               }
+               else
+               { img.src=("default.png");
+                    img.setAttribute('width','120px');
+            }
                td1.appendChild(img);
 
                //get name of restaurant
@@ -96,7 +104,7 @@
                 td3.appendChild(vote);
 
                 //fetch number of reviews of restaurant
-                var s=new XMLHttpRequest(); 
+                var s=new XMLHttpRequest();
                 s.open("GET", "https://developers.zomato.com/api/v2.1/reviews?res_id="+restid,true);
                  s.setRequestHeader('Accept', 'application/json');
                 s.setRequestHeader('user-key','5b4414767efef3384939bfff67f52dc1');
