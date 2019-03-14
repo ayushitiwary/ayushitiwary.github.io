@@ -1,5 +1,4 @@
  
-    
      var npages;
      var total;
     var urlParams = new URLSearchParams(window.location.search);
@@ -162,7 +161,7 @@
             var atext = document.createTextNode(p);
             a.setAttribute("href", "restaurants.html?id="+id+"&pno="+Number(p)+"&lat="+latitude+"&lon="+longitude);
             if(p==pageno)
-            a.setAttribute('id','activelink');
+            a.style.backgroundColor=("rgb(8, 73, 8)");
             a.appendChild(atext);
             pages.appendChild(a); 
             }
