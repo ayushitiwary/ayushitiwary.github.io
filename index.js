@@ -68,8 +68,6 @@ function nearbyRestaurants()
          //get featured image of restaurant
          var td1=document.createElement('td');
         var img = document.createElement('img');
-        //img.setAttribute('class', 'restimg2');
-        //td1.setAttribute('width', '150px');
         if(response.restaurants[i].restaurant.featured_image)
                img.src=response.restaurants[i].restaurant.featured_image;
                else
