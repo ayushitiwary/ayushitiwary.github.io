@@ -57,13 +57,21 @@ function featuredImage()
 {
   var pimg=document.getElementById('main');
         var img=document.createElement('img');
-        img.setAttribute('id', 'mainimg');
-        img.src=response.featured_image;
+        if(response.featured_image)
+        {
+           img.src=response.featured_image;
+           img.setAttribute('id', 'mainimg');
+        }
+        else
+        { img.src=("default.png");
+                    img.setAttribute('width','110px');
+            }
         img.style.height=('100px');
         img.style.width=('100%');
         img.style.height=('550px');
         pimg.appendChild(img);
 }
+
 
 //function to display name and votes for restaurant
 function nameAndVote()
