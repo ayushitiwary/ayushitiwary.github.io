@@ -69,11 +69,15 @@ function nearbyRestaurants()
          var td1=document.createElement('td');
         var img = document.createElement('img');
         if(response.restaurants[i].restaurant.featured_image)
+       {
                img.src=response.restaurants[i].restaurant.featured_image;
-               else
+               img.setAttribute('class', 'nearbyimg');
+        }
+              else
                { img.src=("default.png");
                     img.setAttribute('width','110px');
             }
+       
         td1.appendChild(img);
         tr1.appendChild(td1);
 
