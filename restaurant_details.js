@@ -5,7 +5,7 @@ var id=urlParams.get('id');
 var r = new XMLHttpRequest();
 r.open("GET", "https://developers.zomato.com/api/v2.1/restaurant?res_id="+id,true);
 r.setRequestHeader('Accept', 'application/json');
-r.setRequestHeader('user-key','7935bb0fa0a3002f73e1efec21bdafe2');
+r.setRequestHeader('user-key','737bcf78aa7bab36195421345aa9d74e');
 
 //request for restaurant reviews
 var s=new XMLHttpRequest();
