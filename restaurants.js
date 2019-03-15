@@ -13,7 +13,7 @@
   
     r.open("GET", "https://developers.zomato.com/api/v2.1/search?entity_id="+id+"&entity_type=city&start="+10*(pageno-1)+"&count=10&lat="+latitude+"&lon="+longitude+"&sort=real_distance&order=asc",true);
     r.setRequestHeader('Accept', 'application/json');
-    r.setRequestHeader('user-key','5b4414767efef3384939bfff67f52dc1');
+    r.setRequestHeader('user-key','7935bb0fa0a3002f73e1efec21bdafe2');
     var Sresponse, n;
     r.onload = function ()
     {
@@ -87,6 +87,18 @@
                 name.style.color=("white");
                 td2.appendChild(name);
 
+                //display a heart if liked
+                if(window.localStorage.getItem(restid))
+                {
+                    var like=document.createElement('span');
+                    like.setAttribute('id','like');
+                    var heart=document.createTextNode("\u2764");
+                    like.style.fontSize=("30px");
+                    like.appendChild(heart);
+                     like.style.color=("rgb(199, 67, 67)");
+                     td2.appendChild(like);
+                }
+
                 //get aggregate rating of restaurant
                 var rate=document.createElement('span');
                 rate.setAttribute('id', 'ratereview');
@@ -106,7 +118,7 @@
                 var s=new XMLHttpRequest();
                 s.open("GET", "https://developers.zomato.com/api/v2.1/reviews?res_id="+restid,true);
                  s.setRequestHeader('Accept', 'application/json');
-                s.setRequestHeader('user-key','5b4414767efef3384939bfff67f52dc1');
+                s.setRequestHeader('user-key','7935bb0fa0a3002f73e1efec21bdafe2');
                 s.onload=function(){
                    if (s.status == 200)
                      {
