@@ -17,7 +17,7 @@ function showPosition(position)
 
 r.open("GET", "https://developers.zomato.com/api/v2.1/search?lat="+latitude+"&lon="+longitude+"&sort=real_distance&order=asc",true);
 r.setRequestHeader('Accept', 'application/json');
-r.setRequestHeader('user-key','5b4414767efef3384939bfff67f52dc1');
+r.setRequestHeader('user-key','7935bb0fa0a3002f73e1efec21bdafe2');
 
 
 r.onload = function ()
@@ -75,7 +75,7 @@ function nearbyRestaurants()
         }
               else
                { img.src=("default.png");
-                    img.setAttribute('width','110px');
+                    img.setAttribute('width','90px');
             }
        
         td1.appendChild(img);
