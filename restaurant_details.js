@@ -89,14 +89,9 @@ function nameAndVote()
   var heart=document.createTextNode("\u2764");
   like.appendChild(heart);
   if(window.localStorage.getItem(id))
-  {
-  like.style.color=("rgb(199, 67, 67)");
-  var ltext=document.createTextNode("Like");
-  ltext.setAttribute('id','liketext');
-  like.appendChild(ltext);
-  }
+    like.style.color=("rgb(199, 67, 67)");
   else
-  like.style.color=("rgb(241, 190, 182)");
+    like.style.color=("rgb(241, 190, 182)");
   pname.appendChild(like);
 
   //display no. of votes
