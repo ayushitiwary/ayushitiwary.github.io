@@ -30,6 +30,10 @@ body{
     color: rgb(190, 186, 130);
     background-color: rgb(49, 18, 18, .85);
 }
+table.row:hover
+{
+    background-color: rgb(185, 37, 37);
+}
 #name, .reviewtext{
 
     font-family: 'Times New Roman', Times, serif;
@@ -66,11 +70,6 @@ a{
     width: 45px;
     border-radius: 30px;
 }
-
-.hr{
-background-color: rgb(49, 47, 47);
-padding: 20px 0px;
-}
 .city
 {
    background-color:rgb(197, 157, 106);
@@ -101,7 +100,7 @@ padding: 20px 0px;
 }
 .nearbyimg
 {
-    width:120px;
+    width:100%;
     border-radius: 5px;
 }
 .restname
@@ -180,13 +179,13 @@ background-repeat:no-repeat;
 #like
 {
     float: right;
-    color: rgb(241, 190, 182);
+    /*color: rgb(241, 190, 182);*/
     font-size: 40px;
     text-align: center;
     margin-right: 50px;
     background-color: rgba(211, 220, 228, 0);
     border: 0px;
-}
+} 
 #like:hover
 {
     color: rgb(199, 67, 67);
@@ -207,7 +206,7 @@ background-repeat:no-repeat;
 {
     color: aliceblue;
     margin-top: 300px;
-    width: 80%;
+    width: 100%;
 }
 
 #neartitle
