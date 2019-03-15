@@ -30,7 +30,7 @@ body{
     color: rgb(190, 186, 130);
     background-color: rgb(49, 18, 18, .85);
 }
-.row:hover
+table.row:hover
 {
     background-color: rgb(185, 37, 37);
 }
