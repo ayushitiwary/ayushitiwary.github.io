@@ -5,13 +5,13 @@ var id=urlParams.get('id');
 var r = new XMLHttpRequest();
 r.open("GET", "https://developers.zomato.com/api/v2.1/restaurant?res_id="+id,true);
 r.setRequestHeader('Accept', 'application/json');
-r.setRequestHeader('user-key','5b4414767efef3384939bfff67f52dc1');
+r.setRequestHeader('user-key','7935bb0fa0a3002f73e1efec21bdafe2');
 
 //request for restaurant reviews
 var s=new XMLHttpRequest();
 s.open("GET", "https://developers.zomato.com/api/v2.1/reviews?res_id="+id,true);
 s.setRequestHeader('Accept', 'application/json');
-s.setRequestHeader('user-key','5b4414767efef3384939bfff67f52dc1');
+s.setRequestHeader('user-key','7935bb0fa0a3002f73e1efec21bdafe2');
 
 var response, Sresponse;
 r.onload = function ()
@@ -29,21 +29,23 @@ r.onload = function ()
            costAndAddress();    //display cost for 2 people and address of restaurant
  
            cuisines();    //display cuisines
-    }
-};
-  s.onload=function(){
-            if (s.status == 200)
-           {
-              Sresponse=JSON.parse(s.responseText);
-              
-              //display number of reviews
-              var preview=document.getElementById('reviewno');
-               var rt = document.createTextNode(Sresponse.reviews_count+" Reviews");
-                preview.appendChild(rt);
 
-               reviews();      // get reviews
-           }
-  };
+        
+      }
+    };
+    s.onload=function(){
+      if (s.status == 200)
+     {
+        Sresponse=JSON.parse(s.responseText);
+        
+        //display number of reviews
+        var preview=document.getElementById('reviewno');
+         var rt = document.createTextNode(Sresponse.reviews_count+" Reviews");
+          preview.appendChild(rt);
+
+         reviews();      // get reviews
+     }
+};
 r.onerror = function(err){
   console.log(err);
   };
@@ -72,7 +74,6 @@ function featuredImage()
         pimg.appendChild(img);
 }
 
-
 //function to display name and votes for restaurant
 function nameAndVote()
 {
@@ -85,8 +86,17 @@ function nameAndVote()
   var like=document.createElement('button');
   like.setAttribute('id','like');
   like.setAttribute('onclick', 'liked();');
-  var lt=document.createTextNode("\u2764");
-  like.appendChild(lt);
+  var heart=document.createTextNode("\u2764");
+  like.appendChild(heart);
+  if(window.localStorage.getItem(id))
+  {
+  like.style.color=("rgb(199, 67, 67)");
+  var ltext=document.createTextNode("Like");
+  ltext.setAttribute('id','liketext');
+  like.appendChild(ltext);
+  }
+  else
+  like.style.color=("rgb(241, 190, 182)");
   pname.appendChild(like);
 
   //display no. of votes
@@ -198,6 +208,16 @@ function cuisines()
 function liked()
 {
   var liked=document.getElementById('like');
-  liked.style.color=("rgb(199, 67, 67)");
+  if(window.localStorage.getItem(id))
+  {
+    liked.style.color=("rgb(241, 190, 182)"); 
+    window.localStorage.removeItem(id);
+  }
+  else
+  {
+     liked.style.color=("rgb(199, 67, 67)");
+     window.localStorage.setItem(id,'liked');
+  }
   liked.style.border=("0px");
+ 
 }
