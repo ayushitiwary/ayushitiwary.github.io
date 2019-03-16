@@ -63,14 +63,13 @@ function featuredImage()
         {
            img.src=response.featured_image;
            img.setAttribute('id', 'mainimg');
+           img.style.width=('100%');
         }
         else
         { img.src=("default.png");
-                    img.setAttribute('width','110px');
+                    img.style.width=("30%");
+                    img.style.margin=("5% 35%");
             }
-        img.style.height=('100px');
-        img.style.width=('100%');
-        img.style.height=('550px');
         pimg.appendChild(img);
 }
 
