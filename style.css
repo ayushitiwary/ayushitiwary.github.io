@@ -32,10 +32,10 @@ body{
 }
 table.row:hover
 {
-    background-color: rgb(185, 37, 37);
+    background-color: rgb(37, 22, 8);
 }
-#name, .reviewtext{
-
+#name, .reviewtext
+{
     font-family: 'Times New Roman', Times, serif;
 }
 .userreview, center
@@ -108,7 +108,6 @@ a{
     font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
 }
-/* Pagination links */
 #pages a 
 {
   color: rgb(221, 228, 233);
@@ -121,15 +120,13 @@ a{
   border: 5px;
 }
 
-/* Style the active/current link */
-
  #pages
  {
      overflow: auto;
      min-width:max-content;
      padding: 50px;
  }
-/* Add a grey background color on mouse-over */
+
 #pages a:hover
 {
     background-color: rgb(131, 20, 20);
