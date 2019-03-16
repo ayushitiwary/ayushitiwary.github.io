@@ -13,7 +13,7 @@
   
     r.open("GET", "https://developers.zomato.com/api/v2.1/search?entity_id="+id+"&entity_type=city&start="+10*(pageno-1)+"&count=10&lat="+latitude+"&lon="+longitude+"&sort=real_distance&order=asc",true);
     r.setRequestHeader('Accept', 'application/json');
-    r.setRequestHeader('user-key','737bcf78aa7bab36195421345aa9d74e');
+    r.setRequestHeader('user-key','7935bb0fa0a3002f73e1efec21bdafe2');
     var Sresponse, n;
     r.onload = function ()
     {
@@ -52,7 +52,7 @@
                 //create a table for each reataurant
                 var table=document.createElement('table');
                 table.setAttribute('class', 'row');
-                table.setAttribute('width', '70%');
+                table.setAttribute('width', '100%');
                 var tr1=document.createElement('tr');
                 var tr2=document.createElement('tr');
                 var tr3=document.createElement('tr');
@@ -173,7 +173,7 @@
             var atext = document.createTextNode(p);
             a.setAttribute("href", "restaurants.html?id="+id+"&pno="+Number(p)+"&lat="+latitude+"&lon="+longitude);
             if(p==pageno)
-            a.style.backgroundColor=("rgb(8, 73, 8)");
+            a.style.backgroundColor=("rgb(45, 114, 111)");
             a.appendChild(atext);
             pages.appendChild(a); 
             }
@@ -206,7 +206,7 @@
                 a.setAttribute("href", "restaurants.html?id="+id+"&pno="+p+"&lat="+latitude+"&lon="+longitude);
                 a.appendChild(at);
                 if(p==pageno)
-                a.style.backgroundColor=("rgb(8, 73, 8)");
+                a.style.backgroundColor=("rgb(45, 114, 111)");
           
                 pages.appendChild(a);
             }
@@ -225,7 +225,7 @@
     {
         var table=document.createElement('table');
             table.setAttribute('class', 'row');
-            table.setAttribute('width', '70%');
+            table.setAttribute('width', '100%');
             var tr=document.createElement('tr');
             var td=document.createElement('td');
             var cityspan=document.createElement('span');
