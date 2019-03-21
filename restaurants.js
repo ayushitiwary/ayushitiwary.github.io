@@ -1,14 +1,29 @@
- 
-     var npages;
-     var total;
-    var urlParams = new URLSearchParams(window.location.search);
-    var pageno=Number(urlParams.get('pno'));                //get page number.
-    var id=urlParams.get('id');                          //get city id.
-    var latitude = urlParams.get('lat');                  //get latitude.
-    var longitude = urlParams.get('lon');                //get longitude.
-  
-    const rl = document.getElementById('restaurantList');
+ var urlParams = new URLSearchParams(window.location.search);
+ var page=Number(urlParams.get('pno'));                //get page number.
+ var id=urlParams.get('id');                         //get city id.
+ var cityName=urlParams.get('city');                            //get city name.
+ var latitude = urlParams.get('lat');                  //get latitude.
+ var longitude = urlParams.get('lon');                //get longitude.
+ const rl = document.getElementById('restaurantList');
 
+     
+     // display title of the page
+     title();
+
+    //load the first display of page
+ load(page);
+
+ //load the further parts with scrolling
+ window.addEventListener("scroll",function(event) {
+    var scrollHeight = this.scrollY;
+    y=scrollHeight+ window.innerHeight;
+    if(y > rl.offsetHeight) {
+    load(++page);
+    }
+    });
+    
+  function load(pageno)
+    {
     var r = new XMLHttpRequest();
   
     r.open("GET", "https://developers.zomato.com/api/v2.1/search?entity_id="+id+"&entity_type=city&start="+10*(pageno-1)+"&count=10&lat="+latitude+"&lon="+longitude+"&sort=real_distance&order=asc",true);
@@ -28,9 +43,6 @@
 
             //display restaurant list
             restaurantList(0);
-
-            //paging the list
-            pagination();
         }
     };
     r.onerror = function(err){
@@ -219,18 +231,18 @@
             pages.appendChild(next);
         }
     }
-
+ }
     //function to display title of the page
     function title()
     {
         var table=document.createElement('table');
             table.setAttribute('class', 'row');
-            table.setAttribute('width', '100%');
+            table.setAttribute('width', '70%');
             var tr=document.createElement('tr');
             var td=document.createElement('td');
             var cityspan=document.createElement('span');
             cityspan.setAttribute('id', 'cityspan');
-            var city=document.createTextNode(response.restaurants[0].restaurant.location.city);
+            var city=document.createTextNode(cityName);
             cityspan.appendChild(city);
             var infospan=document.createElement('span');
             infospan.setAttribute('id', 'ratereview');
