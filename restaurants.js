@@ -6,10 +6,6 @@
  var longitude = urlParams.get('lon');                //get longitude.
  const rl = document.getElementById('restaurantList');
 
-     
-     // display title of the page
-     title();
-
     //load the first display of page
  load(page);
 
@@ -171,7 +167,7 @@
     {
         var table=document.createElement('table');
             table.setAttribute('class', 'row');
-            table.setAttribute('width', '70%');
+            table.setAttribute('width', '100%');
             var tr=document.createElement('tr');
             var td=document.createElement('td');
             var cityspan=document.createElement('span');
