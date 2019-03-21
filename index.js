@@ -103,7 +103,7 @@ function nearbyRestaurants()
     td.setAttribute('width', '100px');
     var a=document.createElement('a');
     a.setAttribute('id', 'seemore');
-    a.setAttribute('href','restaurants.html?id=0&pno=1&lat='+latitude+'&lon='+longitude);
+    a.setAttribute('href','restaurants.html?id=0&pno=1&city='+response.restaurants[0].restaurant.location.city+'&lat='+latitude+'&lon='+longitude);
     var atext=document.createTextNode('view more');
     a.appendChild(atext);
     td.appendChild(a);
