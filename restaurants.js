@@ -5,6 +5,9 @@
  var latitude = urlParams.get('lat');                  //get latitude.
  var longitude = urlParams.get('lon');                //get longitude.
  const rl = document.getElementById('restaurantList');
+     
+     // display title of the page
+     title();
 
     //load the first display of page
  load(page);
@@ -33,9 +36,7 @@
         response=JSON.parse(r.responseText);
 
             n=Number(response.restaurants.length);
-           
-            //display title of the page
-            title();
+
 
             //display restaurant list
             restaurantList(0);
