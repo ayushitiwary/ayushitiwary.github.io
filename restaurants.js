@@ -163,74 +163,8 @@
                 rl.appendChild(hr);
 
                 restaurantList(i+1);
-    }
-}
-
-
-
-
-    //paginating of the restaurant list
-    function pagination()
-    {
-        var pages=document.getElementById('pages');
-        //if page number is 1, previous page arrow is absent
-        if(pageno==1)
-        {
-            var limit=Number(pageno)+3;
-
-            //make a link of next 3 pages
-            for(var p=pageno; p<limit; p++)
-            {
-            var a = document.createElement('a');
-            var atext = document.createTextNode(p);
-            a.setAttribute("href", "restaurants.html?id="+id+"&pno="+Number(p)+"&lat="+latitude+"&lon="+longitude);
-            if(p==pageno)
-            a.style.backgroundColor=("rgb(45, 114, 111)");
-            a.appendChild(atext);
-            pages.appendChild(a); 
-            }
-
-            //make a next page arrow link
-            var next = document.createElement('a');
-            var ntext = document.createTextNode(">>");
-           next.setAttribute("href", "restaurants.html?id="+id+"&pno="+(pageno+1)+"&lat="+latitude+"&lon="+longitude);
-            next.appendChild(ntext);
-            pages.appendChild(next);
-
-        }   
-        else
-        {
-            //make a link for previous page
-            var prev = document.createElement('a');
-            var ptext = document.createTextNode("<<");
-            prev.setAttribute("href", "restaurants.html?id="+id+"&pno="+(pageno-1)+"&lat="+latitude+"&lon="+longitude);
-            prev.appendChild(ptext);
-            pages.appendChild(prev);
-
-            var limit=Number(pageno)+3;
-
-            //make a link of one previous page and 2 next pages
-            for(var p=Number(pageno)-1; p<limit; p++)
-            {
-                var a = document.createElement('a');
-                var at = document.createTextNode(p);
-                var div= document.createElement('div');
-                a.setAttribute("href", "restaurants.html?id="+id+"&pno="+p+"&lat="+latitude+"&lon="+longitude);
-                a.appendChild(at);
-                if(p==pageno)
-                a.style.backgroundColor=("rgb(45, 114, 111)");
-          
-                pages.appendChild(a);
-            }
-
-            //make a link for previous page
-            var next = document.createElement('a');
-            var ntext = document.createTextNode(">>");
-            next.setAttribute("href", "restaurants.html?id="+id+"&pno="+(pageno+1)+"&lat="+latitude+"&lon="+longitude) ;
-            next.appendChild(ntext);
-            pages.appendChild(next);
-        }
-    }
+     }
+   }
  }
     //function to display title of the page
     function title()
